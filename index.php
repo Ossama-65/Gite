@@ -1,109 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="http://fonts.googleapis.com/css?family=Lato"
-      rel="stylesheet"
-      type="text/css"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <title>Gites</title>
+</head>
 
-    <link href="style.css"  rel="stylesheet" />
-  </head>
-  <body>
-    <div class="container">
+<body>
 
-      <!-- meu de navigation -->
+  <div class="container">
 
-      <h1 class="text-logo" >GO TO GITE</h1>
+    <div class="nav-container">
       <nav>
-        
-        <ul>
-          <li role="presentation" class="active">
-            <a href="" data-toggle="tab">Menu</a>
-          </li>
-          <li role="presentation">
-            <a href="formcontact/index.php" data-toggle="tab">Contact</a>
-          </li>
-          <li role="presentation">
-            <a href="reservation/index.php" data-toggle="tab">A propos de nous</a>
-          </li>
+        <ul class="navigation_links">
+          <li><a href="index.php" class="logo">G</a></li>
+
         </ul>
-
       </nav>
+    </div>
 
-      <div class="tab-content">
-        <div class="tab-pane active" id="1">
-          <div class="row">
-            <!-- pour addapter a l'écran -->
-            <div class="col-sm-6 col-md-4">   
-              <div class="thumbnail">
-                <img src="images/photo.png" alt="photo du gite" />
-                <div>800€</div>
-                <div class="cpation">
-                  <h4>Formule classic</h4>
-                  <p>Gites + piscine, parking, restaurant</p>
-                  <a href="reservation/index.php" class="btn btn-order" role="button">
-                    En savoir plus
-                  </a>
-                </div>
-              </div>
+    <main>
+
+      <div class="hero">
+        <h2>Comfort, Securité et Confiance</h2>
+      </div>
+      <section>
+        <div class="form-container">
+          <form action="" class="form-control">
+            <select name="categorie" id="" class="select-css">
+              <option value="default">Type Hebergement</option>
+              <option value="chambre">Chambre</option>
+              <option value="appartment">Appartement</option>
+              <option value="maison">Maison</option>
+              <option value="villa">Villa</option>
+            </select>
+            <input type="number" class="inputs" name="pieces" min="1" max="6" placeholder="Pieces">
+            <input type="number" class="inputs" name="bathrooms" min="1" max="4" placeholder="Salle de Bain">
+            <div class="input-control">
+              <input type="submit" onclick="this.showAlert()" class="input-button" value="Rechercher">
             </div>
-          
 
-            <div class="col-sm-6 col-md-4">   
-                <div class="thumbnail">
-                  <img src="images/photo.png" alt="photo du gite" />
-                  <div>800€</div>
-                  <div class="cpation">
-                    <h4>Formule classic</h4>
-                    <p>Gites + piscine, parking, restaurant</p>
-                    <a href="#" class="btn btn-order" role="button">
-                      En savoir plus
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-md-4">   
-                <div class="thumbnail">
-                  <img src="images/photo.png" alt="photo du gite" />
-                  <div>800€</div>
-                  <div class="cpation">
-                    <h4>Formule classic</h4>
-                    <p>Gites + piscine, parking, restaurant</p>
-                    <a href="#" class="btn btn-order" role="button">
-                      En savoir plus
-                    </a>
-                  </div>
-                </div>
-              </div>
-          </div>
+          </form>
         </div>
-     </div>
-  </body>
+      </section>
+
+
+    </main>
+
+
+
+  </div>
+
+  <script type="text/javascript" src="js/functions.js"></script>
+</body>
+
 </html>
