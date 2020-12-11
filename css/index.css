@@ -1,0 +1,98 @@
+html,
+div,
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-image: url("../images/maquet.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  position: relative;
+  height: 10rem;
+}
+
+.navigation_links {
+  margin: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 4rem;
+  text-decoration: none;
+  color: #EC524B;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  width: 26em;
+  height: 4rem;
+  font-size: 2.5rem;
+  color: #E8E8E8;
+  font-family: sans-serif;
+  margin: 2rem auto;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  width: 50rem;
+  padding: 3rem;
+  border-radius: 5px;
+}
+
+.form-control {
+  position: relative;
+}
+
+.select-css,
+.inputs {
+  font-family: sans-serif;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: .6em 1.4em .5em .8em;
+  text-align: center;
+  appearance: none;
+  color: #222831;
+}
+
+.input-control {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.input-button {
+  font-size: 1.7rem;
+  width: 15vw;
+  height: 7vh;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #EC524B;
+  color: white;
+  font-weight: 500;
+}
+
+.input-button:hover {
+  background-color: #cC5240;
+  box-shadow: 0 0 10px #cC5240;
+}
