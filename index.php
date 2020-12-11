@@ -47,7 +47,7 @@
             <a href="" data-toggle="tab">Menu</a>
           </li>
           <li role="presentation">
-            <a href="css/index.php" data-toggle="tab">Contact</a>
+            <a href="formcontact/index.php" data-toggle="tab">Contact</a>
           </li>
           <li role="presentation">
             <a href="reservation/index.php" data-toggle="tab">A propos de nous</a>
