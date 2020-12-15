@@ -1,10 +1,15 @@
 <?php
+session_start();
 require_once("classes/User.php");
 
 $guest =  new User();
 
-print_r($_POST['categorie']);
+  $passData = $_SESSION['data'];
+ 
+  ['categorie'=>$cat,'pieces'=>$pieces, 'bathrooms'=>$bathrooms,'dateIn'=>$dateIn, 'date-out'=>$dateOut] = $passData;
 
+  $result = $guest->filterGites( $cat );
+  // format date date('d-m-Y', strtotime( $dateIn));
 ?>
 
 <!DOCTYPE html>

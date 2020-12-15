@@ -1,15 +1,15 @@
 <?php
-  if( isset( $_POST['submit']) ){
+session_start();
+if (isset($_POST)) {
 
-    if( !empty( $_POST['categorie']) && !empty($_POST['pieces']) && !empty($_POST['bathrooms'])){
-      $query = $_POST['submit'];
-      /* $categorie = ($_POST['categorie']);
-      $pieces = ($_POST['pieces']);
-      $bathrooms = ($_POST['bathrooms']); */
+  if (!empty($_POST['categorie']) && !empty($_POST['pieces']) && !empty($_POST['bathrooms'])
+   && !empty($_POST['dateIn']) && !empty($_POST['date-out'])) {
+    $_SESSION['id'] = 'userGuest';
+    $_SESSION['data'] = $_POST;
 
-      header( 'location: resultats.php' );
-    } 
+    header('location: resultats.php');
   }
+}
 
 ?>
 
@@ -47,15 +47,28 @@
           <form action="" id="formReq" class="form-control" method="post">
             <select name="categorie" id="" class="select-css">
               <option value="default">Type Hebergement</option>
-              <option value="chambre">Chambre</option>
-              <option value="appartment">Appartement</option>
-              <option value="maison">Maison</option>
-              <option value="villa">Villa</option>
+              <option value="Chambre">Chambre</option>
+              <option value="Appartement">Appartement</option>
+              <option value="Maison">Maison</option>
+              <option value="Villa">Villa</option>
             </select>
             <input type="number" class="inputs" name="pieces" min="1" max="6" placeholder="Pieces">
             <input type="number" class="inputs" name="bathrooms" min="1" max="4" placeholder="Salle de Bain">
+            <div class="input-dates">
+             
+              <div>
+                <label for="datein" class="date-label">Date Initial</label>
+                <input class="inputs" type="date" name="dateIn" id="">
+              </div>
+              <div>
+                <label for="date-out" class="date-label">Fin Date</label>
+                <input class="inputs" type="date" name="date-out" id="">
+              </div>
+
+            </div>
+
             <div class="input-control">
-              <button type="submit" id="search" class="input-button" name="submit">Recherecher</button>
+              <input type="submit" id="search" class="input-button" name="submit" value="Recherecher">
             </div>
 
           </form>

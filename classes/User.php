@@ -16,4 +16,17 @@
       return $results;
     }
 
+    public function filterGites( string $type ){
+      $this->connec = $this->dbConnect();
+      $sql = " SELECT * FROM gite WHERE title = '$type' ";
+      $statement = $this->connec->query($sql);
+      $statement->execute();
+      $results = $statement->fetchAll();
+      return $results;
+    }
+
+    public function makeReservation( $dateIn , $dateOut , $email ){
+      // TODO implement reservation
+    }
+
    }
