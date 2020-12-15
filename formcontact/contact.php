@@ -76,9 +76,9 @@
 <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet"
 type="text/css" >
 
-<link href="style.css" rel="stylesheet" >
+<link href="contact.css" type="text/css" rel="stylesheet" >
 
-<title>Contactez-moi</title>
+<title>Contactez-nous</title>
 
 </head>
 <body>
@@ -89,13 +89,13 @@ type="text/css" >
 
         <div class="heading" >
 
-            <h2>Contactez-moi</h2>
+            <h2>Contactez-Nous</h2>
 
         </div>
 
         <div class="row">
 
-            <div class="col-lg-10 col-lg-offset-1">
+            <div class="col-lg-10 col-lg-offset-1 form-container">
 
                 <!-- htmlspecialchars sécurise le form -->
                 <form  id="contact-form" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" role="form">
@@ -107,11 +107,11 @@ type="text/css" >
 
                             <label for="firstname">Prénom <span class="blue"> *</span> </label>
 
-                            <input type="text" id="firstname"  name="firstname" class="form-control" placeholder="Votre prénom" value="<?php echo $firstname?>">
+                            <input type="text" id="firstname"  name="firstname" class="form-control" placeholder="Votre prénom" >
                                                 
-                                                <!-- affiche le message d'erreur -->
+                            <!-- affiche le message d'erreur -->
 
-                            <p class="comments"><?php echo $firstnameError; ?></p>
+                            <p class="comments"><?= $firstnameError; ?></p>
                         </div>
 
                         <!-- rentrer son nom -->
@@ -119,18 +119,18 @@ type="text/css" >
 
                             <label for="name">Nom <span class="blue"> *</span> </label>
  
-                            <input type="text" id="name"  name="name" class="form-control" placeholder="Votre nom" value="<?php echo $name;?>">
+                            <input type="text" id="name"  name="name" class="form-control" placeholder="Votre nom">
 
-                            <p class="comments"><?php echo $nameError; ?></p>
+                            <p class="comments"><?= $nameError; ?></p>
                         </div>
 
                         <!-- rentrer son email -->
                         <div class="col-md-6">
                             <label for="email">Email <span class="blue"> *</span> </label>
 
-                            <input type="email" id="email"  name="email" class="form-control" placeholder="Votre email" value="<?php echo $email;?>">
+                            <input type="email" id="email"  name="email" class="form-control" placeholder="Votre email">
 
-                            <p class="comments"><?php echo $emailError; ?></p>
+                            <p class="comments"><?= $emailError; ?></p>
                         </div>
 
                         <!-- mettre son numéro -->
@@ -138,18 +138,18 @@ type="text/css" >
                             <label for="telephone">Téléphone</label>
 
                             <!-- required -->
-                            <input type="tel" id="telephone"  name="telephone" class="form-control" placeholder="Votre télephone" value="<?php echo $telephone;?>">
+                            <input type="tel" id="telephone"  name="telephone" class="form-control" placeholder="Votre télephone">
 
-                            <p class="comments"><?php echo  $telephoneError; ?></p>
+                            <p class="comments"><?= $telephoneError; ?></p>
                         </div>
 
                         <!-- laisser un commentaire -->
                         <div class="col-md-12">
                             <label for="telephone">Message<span class="blue">*</span></label>
 
-                            <textarea id="message" name="message" class="form-control" placeholder="Votre message" rows="4"><?php echo $message; ?></textarea> 
+                            <textarea id="message" name="message" class="form-control" placeholder="Votre message" rows="4"></textarea> 
 
-                            <p class="comments"><?php echo $messageError;?></p>
+                            <p class="comments"><?= $messageError;?></p>
                         </div>
 
                         <!-- message d'alerte -->
@@ -167,7 +167,7 @@ type="text/css" >
 
                     <!-- Message de remerciement -->
 
-                    <p class="thank-you">Votre message à bien étée nvoter. Merci de m'avoir contacter</p>
+                    <p class="thank-you">Votre message à bien étée envoyée. Merci de m'avoir contacter</p>
 
                 </form>
 
